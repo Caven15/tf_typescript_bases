@@ -1,0 +1,16 @@
+Installation des dépendances : 
+
+local  : npm install --save-dev typescript (à privilégier pour une importation dans un autre environement)
+
+- initialisation package                         => npm init -y
+- installation de ts en local
+- Activation du dosier outdir                    => distant (arbitraire)
+- Ajout de l'include au ts config                => "scripts/*.ts"
+- mise e nplace de la commande dans package.json => tsc && node distant/app.js
+- lancement avec npm run suivis du nom du script => start-demo
+
+global : npm install -g typescript
+
+Initialiser la config du ts : tsc --init
+
+transcompiler de ts en js : tsc

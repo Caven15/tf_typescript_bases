@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "start-demo" : "tsc && node distant/demo.js",
+    "start-exos" : "tsc && node distant/exos.js"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4"
+  }
+}
