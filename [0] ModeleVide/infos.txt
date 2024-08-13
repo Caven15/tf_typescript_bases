@@ -1,0 +1,9 @@
+Installation des dépendances : 
+
+local  : npm install --save-dev typescript (à privilégier pour une importation dans un autre environement)
+
+global : npm install -g typescript
+
+Initialiser la config du ts : tsc --init
+
+transcompiler de ts en js : tsc
