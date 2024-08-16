@@ -59,16 +59,18 @@ prenoms.forEach((prenom, index) => {
 console.log("-----------------------------");
 function motDePasseValide(motDePasse) {
     // Définition de l'expression régulière pour valider le mot de passe
-    // ^ 	                                : Début de la chaine (le mot de passe doit corresponddre a toute la chaine)
-    // (?=.*[!#$%])                         : Cette partie comprend les caractères spéciaux courants que nous voulons détecter
-    // (?=.*[a-z])                          : Cette partie s'assure qu'il y a au moins une lettre minuscule quelque dans la chaine
-    // (?=.*[A-Z])                          : Cette partie s'assure qu'il y a au moins une lettre majuscule quelque dans la chaine
-    // (?=.*\d)                             : Cette partie s'assure qu'il y a au moins un chiffre quelque part dans la chaine
-    // .{8,}                                : Cette partie s'assure que le mot de passe contient au moins 8 caractères
-    // $                                    : Fin de la chaine (le mot de passe doit corresponddre a toute la chaine)
+    // ^ 	        : Début de la chaine (le mot de passe doit corresponddre a toute la chaine)
+    // (?=.*[!#$%]) : Cette partie comprend les caractères spéciaux courants que nous voulons détecter
+    // (?=.*[a-z])  : Cette partie s'assure qu'il y a au moins une lettre minuscule quelque part dans la chaine
+    // (?=.*[A-Z])  : Cette partie s'assure qu'il y a au moins une lettre majuscule quelque part dans la chaine
+    // (?=.*\d)     : Cette partie s'assure qu'il y a au moins un chiffre quelque part dans la chaine
+    // .{8,}        : Cette partie s'assure que le mot de passe contient au moins 8 caractères
+    // $            : Fin de la chaine (le mot de passe doit corresponddre a toute la chaine)
     const regex = /^(?=.*[!#$%])(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/;
-    // LA m"tode test() retourne true si le mot de passe respecte toutes les conditons imposées par l'expression régulière, sinon on renvoie false
+    // LA méthode test() retourne true si le mot de passe respecte toutes les conditons imposées par l'expression régulière, sinon on renvoie false
     return regex.test(motDePasse);
 }
 let motDePasse1 = "Strong!Pass1";
-console.log(`Le mot de passe ${motDePasse1} est => ${motDePasseValide(motDePasse1)}`);
+console.log(`Le mot de passe "${motDePasse1}" est => ${motDePasseValide(motDePasse1)}`);
+let motDePasse2 = "test";
+console.log(`Le mot de passe "${motDePasse2}" est => ${motDePasseValide(motDePasse2)}`);
