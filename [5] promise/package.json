@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start-demo": "tsc && node distant/demo.js",
+    "start-api": "tsc && node distant/demoPokeApi.js",
+    "start-exos": "tsc && node distant/exos.js"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "axios": "^1.7.4",
+    "typescript": "^5.5.4"
+  }
+}
